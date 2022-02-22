@@ -8,7 +8,7 @@ const graphcmsToken = process.env.GRAPHCMS_TOKEN;
 
 
 export default async function comments(req, res) {
-  console.log(graphcmsToken);
+ 
   
   const graphQLClient = new GraphQLClient(graphqlAPI, {
     headers: {
@@ -24,7 +24,7 @@ export default async function comments(req, res) {
     const result = await graphQLClient.request(query, req.body);
     return res.status(200).send(result);
   } catch (error) {
-     console.log(error);
+    
      return res.status(500).send(error);
   }
  
