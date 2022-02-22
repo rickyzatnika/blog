@@ -70,8 +70,9 @@ export const getPostDetails = async (slug) => {
       }
     } 
   `
+  
   const result = await request(graphqlAPI, query, { slug });
-
+  
   return result.post;
 }
 
