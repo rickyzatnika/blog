@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import Image from 'next/image';
 
 
 const PostDetail = ({ post }) => {
@@ -30,7 +31,7 @@ const PostDetail = ({ post }) => {
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'image':
         return (
-          <img
+          <Image
             key={index}
             alt={obj.title}
             height={obj.height}
@@ -48,49 +49,50 @@ const PostDetail = ({ post }) => {
 
   return (
     <div className="mb-8 rounded-lg bg-white p-4 pb-2 shadow-lg mt-8">
-      <div className="relative mb-6 overflow-hidden shadow-md">
-        <img
+      <div className="relative mb-3 overflow-hidden shadow-md ">
+        <Image
+         
           src={post.featuredImage.url}
           alt={post.title}
-          className="h-full w-full rounded-t-lg object-top"
-          width='1200px'
-          height='1200px'
-        
+          width={1200}
+          height={850}
+          layout='responsive'
+          objectFit='cover'
         />
       </div>
       <div className="px-4 lg:px-0">
         <div className="mb-8 flex w-full items-center">
-          <div className="mb-4 mr-8 flex w-full items-center  lg:mb-0 lg:w-auto">
-            <img
+          <div ref={lazyroot} className=" mr-8 flex items-center w-auto">
+            <Image
+              lazyRoot={lazyRoot}
               alt={post.author.name}
-              height="28px"
-              width="28px"
-              className="rounded-full align-middle"
+              height={18}
+              width={18}
               src={post.author.photo.url}
             
             />
-            <p className="text-md ml-2 inline align-middle text-gray-700">
+            <p className="text-xs ml-1 inline align-middle text-gray-700">
               {post.author.name}
             </p>
           </div>
-          <div className=" font-medium text-gray-700 px-2">
-            <div className="flex items-center  flex-wrap gap-1 align-middle w-full">
-              <img
-                className="calendar"
-                width='28px'
-                height='28px'
+          <div className=" font-medium text-gray-700 px-2 items-center flex align-middle gap-2 justify-center">
+            
+              <Image
+
+                width={28}
+                height={28}
                 src="https://img.icons8.com/color/48/000000/calendar-16.png"
               
               />
-              <span className="text-sm text-gray-700">
-                {moment(post.createdAt).format('MMM DD, YYYY')}
+              <span className="text-sm text-neutral-700 flex flex-row w-full justify-center items-center">
+                {moment(post.createdAt).format('MMM DD')}
               </span>
-            </div>
+            
           </div>
         </div>
         <h1 className="mb-8 text-3xl font-semibold ">{post.title}</h1>
         
-       <article className='text-gray-500'>
+       <article className='text-gray-500 p-0 m-0'>
         {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
             

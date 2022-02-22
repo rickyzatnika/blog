@@ -1,6 +1,6 @@
-import React, { useEffect }  from 'react'
+import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
-
+import Image from 'next/image'
 export default function Custom404() {
 
     const router = useRouter();
@@ -8,17 +8,24 @@ export default function Custom404() {
     useEffect(() => {
         setTimeout(() => {
             router.push('/');
-        }, 3000)
+        }, 2000)
     }, [])
 
-  return (
-    <div className='text-center lg:mt-40 md:mt-10 bg-slate-400 bg-opacity-10 rounded-full shadow-xl max-w-fit mx-auto p-20'>
-        <h4>Oppppssssss..</h4>
-        <div className='text-6xl my-8 flex justify-center flex-col'>
-            404
-            <h2 className='text-3xl font-bold animate-bounce text-teal-500'>PAGE NOT FOUND !!</h2>
+    return (
+        <div className="container min-h-screen mx-auto flex flex-col w-full justify-center">
+            <div className='text-center bg-slate-400 bg-opacity-10 rounded-xl shadow-xl p-20 flex flex-col justify-center w-96 mx-auto'>
+                <div className="w-full">
+                    <Image
+                        width={80}
+                        height={80}
+                        src='/sad.png'
+                    />
+                </div>
+                <div className='text-6xl my-3 flex justify-center flex-col'>
+                    <h2 className='mb-2 font-bold text-slate-800'>404</h2>
+                    <h2 className='text-xl font-bold animate-bounce text-teal-500'>PAGE NOT FOUND !!</h2>
+                </div>
+            </div>
         </div>
-        <h4 className='uppercase'>Halaman yang kamu tuju tidak ada</h4>
-    </div>
-  )
+    )
 }

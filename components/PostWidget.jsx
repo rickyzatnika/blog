@@ -1,7 +1,8 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 import Link from 'next/link';
 import { getRecentPosts, getSimilarPosts } from '../services';
+import Image from 'next/image';
 
 const PostWidget = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
@@ -14,6 +15,9 @@ const PostWidget = ({ categories, slug }) => {
           .then((result) => setRelatedPosts(result))
     }
   }, [slug])
+
+
+  
  
   return(
 
@@ -22,10 +26,15 @@ const PostWidget = ({ categories, slug }) => {
           {slug ? 'Relate Posts' : 'Recent Posts'}
         </h3>
         {relatedPosts.map((post) => (
-          <div key={post.title} className="flex items-center w-full mb-8">
-            <div className="w-16 flex-none">
-              <img src={post.featuredImage.url} alt={post.title} width='90px' height='90px'
-                className='align-middle rounded-sm'
+          <div key={post.title} className="flex items-center w-full mb-8 transition-opacity opacity-80 hover:opacity-100">
+            <div  className="w-16 flex-none overflow-hidden">
+              <Image src={post.featuredImage.url} alt={post.title} 
+                width={90} 
+                height={90}
+                
+                className='align-middle rounded-full  '
+                layout='responsive'
+                objectFit='cover'
               />
             </div>
             <div className='flex-grow ml-4'>
