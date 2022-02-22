@@ -30,7 +30,7 @@ const PostCard = ({ post }) => {
         </div>
         <div className=" font-medium text-gray-700">
           <div className="flex align-middle items-center gap-1 justify-center">
-            <Image src="https://img.icons8.com/color/48/000000/calendar-16.png"
+            <Image src="https://img.icons8.com/color/48/000000/calendar-16.png" alt='calendar icon'
             height="28px" width="28px" />
             <span className='text-sm text-gray-700'>{moment(post.createdAt).format('MMM DD, YYYY')}</span>
           </div>

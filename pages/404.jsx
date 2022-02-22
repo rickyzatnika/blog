@@ -3,13 +3,13 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 export default function Custom404() {
 
-    const router = useRouter();
+    const Router = useRouter();
 
     useEffect(() => {
         setTimeout(() => {
-            router.push('/');
+            Router.push('/');
         }, 2000)
-    }, [])
+    })
 
     return (
         <div className="container min-h-screen mx-auto flex flex-col w-full justify-center">
@@ -19,6 +19,7 @@ export default function Custom404() {
                         width={80}
                         height={80}
                         src='/sad.png'
+                        alt='sad'
                     />
                 </div>
                 <div className='text-6xl my-3 flex justify-center flex-col'>

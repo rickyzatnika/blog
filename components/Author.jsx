@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 
 
 
@@ -8,13 +8,13 @@ const Author = ({ author }) => {
     <div className='text-center mt-20 mb-8 p-8 mx-auto w-80 relative rounded-lg shadow-lg bg-neutral-100'>
       <div className="absolute left-4  top-2">
         <div className="flex items-center justify-center align-middle mr-2 border-b">
-          <img
+          <Image
             alt={author.name}
-            width='25px'
-            heigth='25px'
+            width={25}
+            heigth={25}
             className='relative animate-bounce align-middle rounded-full shadow-xl  '
             src={author.photo.url}
-          
+            unoptimized
           />
           <p className='absolute left-6 right-0 text-neutral-400'>createdBy_</p>
         </div>

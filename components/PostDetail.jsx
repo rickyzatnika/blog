@@ -62,9 +62,9 @@ const PostDetail = ({ post }) => {
       </div>
       <div className="px-4 lg:px-0">
         <div className="mb-8 flex w-full items-center">
-          <div ref={lazyroot} className=" mr-8 flex items-center w-auto">
+          <div className=" mr-8 flex items-center w-auto">
             <Image
-              lazyRoot={lazyRoot}
+             
               alt={post.author.name}
               height={18}
               width={18}
@@ -82,6 +82,7 @@ const PostDetail = ({ post }) => {
                 width={28}
                 height={28}
                 src="https://img.icons8.com/color/48/000000/calendar-16.png"
+                alt='calendar icon'
               
               />
               <span className="text-sm text-neutral-700 flex flex-row w-full justify-center items-center">

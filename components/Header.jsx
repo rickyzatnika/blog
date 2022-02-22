@@ -18,7 +18,7 @@ const Header = ( ) => {
           <Link href="/">
             <span className="cursor-pointer text-3xl font-bold text-slate-700 flex align-middle items-center gap-1 hover:animate-pulse">
                <Image
-                src='/r.png' width={30} height={30} className="animate-spin hover:animate-none"
+                src='/r.png' width={30} height={30} className="animate-spin hover:animate-none" alt='logo'
                />Ddoys.
             </span>
           </Link>
