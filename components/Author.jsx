@@ -10,9 +10,8 @@ const Author = ({ author }) => {
         <div className="flex items-center justify-center align-middle mr-2 border-b">
           <img
             alt={author.name}
-            width={25}
-            heigth={25}
-            layout="fill"
+            width='25px'
+            heigth='25px'
             className='relative animate-bounce align-middle rounded-full shadow-xl  '
             src={author.photo.url}
           

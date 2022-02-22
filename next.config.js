@@ -7,4 +7,4 @@ module.exports = {
   },
 }
 
-{import('next').NextConfig}
+// {import('next').NextConfig}
