@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+
+
+
 export default function Custom404() {
 
     const Router = useRouter();
