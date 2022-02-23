@@ -35,7 +35,10 @@ export async function getStaticProps({ params }) {
   const posts = await getCategoryPost(params.slug);
 
   return {
-    props: { posts },
+    props: {
+       posts 
+      }, 
+      revalidate: 1,
   };
 }
 
@@ -46,5 +49,6 @@ export async function getStaticPaths() {
   return {
     paths: categories.map(({ slug }) => ({ params: { slug } })),
     fallback: true,
+    revalidate: 1,
   };
 }

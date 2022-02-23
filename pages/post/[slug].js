@@ -40,7 +40,10 @@ export async function getStaticProps({ params }) {
   const data = await getPostDetails(params.slug);
 
   return {
-    props:{ post: data }
+    props:{
+      post: data 
+    },
+    revalidate: 1,
   }
 }
 
