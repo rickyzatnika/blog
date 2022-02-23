@@ -60,7 +60,7 @@ const PostDetail = ({ post }) => {
           objectFit='cover'
         />
       </div>
-      <div className="px-4 lg:px-0">
+      <div className="px-6 ">
         <div className="mb-8 flex w-full items-center">
           <div className=" mr-8 flex items-center w-auto">
             <Image
@@ -86,7 +86,7 @@ const PostDetail = ({ post }) => {
               
               />
               <span className="text-sm text-neutral-700 flex flex-row w-full justify-center items-center">
-                {moment(post.createdAt).format('MMM DD')}
+                {moment(post.createdAt).format('MMM DD, YYYY')}
               </span>
             
           </div>

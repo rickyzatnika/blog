@@ -25,23 +25,23 @@ const Header = ( ) => {
         </div>
         <nav className="navigation md-contents align-middle flex justify-center relative top-1 item-center ">
           <ul className='flex gap-8 flex-wrap'>
-            <li className='inline text-slate-500 text-sm font-bold hover:border-b hover:border-teal-600 hover:text-teal-600'>
+            <li className='inline text-neutral-700 text-sm font-bold hover:border-b hover:border-teal-600 hover:text-teal-600'>
               <Link href='/'>Home</Link>
             </li>
-            <li className='inline text-slate-500 text-sm font-bold hover:border-b hover:border-teal-600 hover:text-teal-600'>
+            <li className='inline text-neutral-700 text-sm font-bold hover:border-b hover:border-teal-600 hover:text-teal-600'>
               <Link href='/About'>About Us</Link>
             </li>
-            <li className='inline text-slate-500 text-sm font-bold hover:border-b hover:border-teal-600 hover:text-teal-600'>
+            <li className='inline text-neutral-700 text-sm font-bold hover:border-b hover:border-teal-600 hover:text-teal-600'>
               <Link href='/Contact'>Contact</Link>
             </li>
           </ul>
         </nav>
       </div>
-      <div className="md-contents  align-middle flex justify-center flex-wrap gap-4 bg-neutral-500 ">
+      <div className="md-contents  align-middle flex justify-center  flex-wrap gap-4 bg-neutral-900 ">
           {categories.map((category) => (
             <Link key={category.slug} href={`/category/${category.slug}`}>
-              <span className="p-3 cursor-pointer align-middle text-sm hover:bg-neutral-400 text-neutral-200 md:float-right hover:text-teal-800">
-                {category.name}
+              <span className="p-3 cursor-pointer align-middle text-sm transition ease-in delay-50 hover:bg-neutral-300  text-neutral-200 md:float-right hover:text-teal-800">
+                {category.name} 
               </span>
             </Link>
           ))}
