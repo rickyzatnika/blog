@@ -11,7 +11,7 @@ export default function Custom404() {
     useEffect(() => {
         setTimeout(() => {
             Router.push('/');
-        }, 2000)
+        }, 3000)
     })
 
     return (
