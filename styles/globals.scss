@@ -78,6 +78,53 @@ p ,article {
   font-size: 1rem !important;
   
 }
+
+.navbar {
+  transition: .2s ease;
+}
+
+
+.navbar.activated {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 99999;
+  background: hsl(0 0% 0% / 0.8);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
+  
+  padding: .5rem 6%;
+  box-shadow: 0 3px 8px #18181827;
+}
+.navbar.activated .menu {
+  top: 1rem;
+  right: 2rem;
+  background: transparent;
+}
+.navbar.activated ul li {
+  color: whitesmoke;
+  font-weight: normal;
+}
+.navbar.activated .menu svg {
+  stroke: whitesmoke;
+}
+
+.navbar.activated .navbrand {
+  font-size: 1.5rem !important;
+  color: whitesmoke;
+}
+.navbar.activated .navbrand img{
+  width: 20px !important;
+  height: 20px !important;
+  animation: unset ;
+}
+
+
+
+
+
 .navList {
   display: flex;
   justify-content: center;
@@ -94,38 +141,58 @@ p ,article {
 }
 
 
+
+
+
+
+
+
+
+
 @media screen and(max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
   .navList {
-        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
         transform: translate(-100%);
         visibility: hidden;
         opacity: 0;
         display: unset;
+        
   }
+  
   .navList.active {
-         position: absolute;
+        position: fixed;
         display: block;
         top: 0;
         left: 0;
         background: hsl(0 0% 0% / 0.85);
         -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(3px);
         width: 100%;
         height: 100vh;
         transition: .125s ease;
         opacity: 1;
         transform: translate(0);
         visibility: visible;
-        padding: 2rem  0;
         z-index: 9;
-        padding: 0 6%;
+        padding: 0 8%;
         text-align: center;
   }
+  .navList.active ul {
+    display: block;
+    position: relative;
+    top: 5rem;
+  }
+  
   .navList.active li {
-   
-    margin: 2rem auto;
-    border-bottom: 1px solid #979797;
+    margin: 0 auto;
+    border-bottom: 1px solid #97979734;
     padding: 1rem 2rem;
+    
   }
   .navList.active li span{
     font-size: 1rem;
@@ -133,14 +200,19 @@ p ,article {
   .menu {
     display: flex;
     background: white;
-    position: absolute;
-    right: 2rem;
+   
+    margin-left: auto;
+    transform-origin: right;
+    
     top: 2rem;
-    border-radius: 2px;
     box-shadow: none;
     outline: none;
     border: none;
   }
+  .navList.active .menu {
+    position: fixed;
+  }
+ 
   .navigation {
     margin-left: 20%;
   }
