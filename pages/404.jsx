@@ -15,8 +15,8 @@ export default function Custom404() {
     })
 
     return (
-        <div className="container min-h-screen mx-auto flex flex-col w-full justify-center">
-            <div className='text-center bg-slate-400 bg-opacity-10 rounded-xl shadow-xl p-20 flex flex-col justify-center w-96 mx-auto'>
+        <div className="container animate-bounce min-h-screen mx-auto flex flex-col w-full justify-center -mt-20">
+            <div className='text-center bg-slate-400 bg-opacity-10 rounded-xl shadow-xl p-10 flex flex-col justify-center w-96 mx-auto'>
                 <div className="w-full">
                     <Image
                         width={80}
