@@ -7,7 +7,7 @@ import Image from 'next/image';
 const PostCard = ({ post }) => {
  
   return (
-    <div className=' shadow-lg rounded;lg p-0 lg:p-8 pb-12 mb-8 mt-8 px-4'>
+    <div className=' shadow-lg rounded;lg p-0 lg:p-8 pb-12 mb-8 mt-8 px-0 md:px-4'>
       
       <div className="relative overflow-hidden shadow-md mb-2 max-w-full">
         <Image src={post.featuredImage.url} alt={post.title} 

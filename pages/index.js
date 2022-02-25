@@ -34,7 +34,7 @@ export default function Home({ posts }) {
               </div>
             </div>
           </div>
-          <div className="container bg-gray-200 mt-20 p-20 mx-auto w-full flex flex-col justify-center text-center rounded-md">
+          <div className="container bg-gray-200 mt-20 p-6 md:p-20 mx-auto w-full flex flex-col justify-center text-center rounded-md">
             <p className='  text-center text-neutral-600 mb-8'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet deleniti quis, ad et dicta voluptatibus voluptas cumque quae, aperiam sunt repudiandae nisi aspernatur voluptate doloribus consequatur, hic distinctio dolor autem atque. Asperiores ab animi aspernatur possimus nemo doloremque, magni temporibus consequuntur voluptas! Fugiat voluptatibus qui reiciendis facilis sint, culpa ea!</p>
             <small className='my-8 text-neutral-700'>Jangan Lupa Follow Mimin ya :D</small>
             <div className="sosmed tex-center flex justify-center gap-8 underline">
