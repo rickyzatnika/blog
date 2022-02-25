@@ -3,6 +3,7 @@ import moment from 'moment';
 import Image from 'next/image';
 
 
+
 const PostDetail = ({ post }) => {
 
   const getContentFragment = (index, text, obj, type) => {
@@ -20,6 +21,7 @@ const PostDetail = ({ post }) => {
       if (obj.underline) {
         modifiedText = (<u key={index}>{text}</u>);
       }
+     
     }
 
     switch (type) {
@@ -31,14 +33,16 @@ const PostDetail = ({ post }) => {
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'image':
         return (
-          <Image
-            key={index}
-            alt={obj.title}
-            height={obj.height}
-            width={obj.width}
-            src={obj.src}
-          
-          />
+        
+            <Image
+              key={index}
+              alt={obj.title}
+              height={obj.height}
+              width={obj.width}
+              src={obj.src}
+            
+            />
+   
         );
       default:
         return modifiedText;
@@ -48,7 +52,7 @@ const PostDetail = ({ post }) => {
 
 
   return (
-    <div className="mb-8 rounded-lg bg-white p-0 md:p-4 pb-2 shadow-lg mt-8">
+    <div className="mb-8 rounded-lg bg-white p-2 md:p-4 pb-2 shadow-lg mt-8">
       <div className="relative mb-3 overflow-hidden shadow-md ">
         <Image
          
