@@ -244,8 +244,18 @@ p ,article {
     top: 14%;
     left: 22%;
   }
+
+  .PostDetails {
+    @apply p-2
+  }
+  .PostDetailContent {
+    @apply px-4
+  }
 }
 @media screen and(max-width: 362px){
+  html {
+    font-size: 85%;
+  }
   .navigation {
     position: absolute;
     top: 12%;
@@ -253,10 +263,19 @@ p ,article {
   }
 }
 @media screen and(max-width: 320px){
+  html {
+    font-size: 80%;
+  }
   .navigation {
     position: absolute;
     top: 15%;
     left: 15%;
+  }
+  .PostDetails {
+    @apply p-0
+  }
+  .PostDetailContent {
+    @apply px-2
   }
 }
 @media screen and(max-width: 300px) {

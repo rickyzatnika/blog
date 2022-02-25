@@ -15,7 +15,7 @@ const Author = ({ author }) => {
             className='animate-bounce relative align-middle  rounded-full'
             src={author.photo.url}
           />
-          <p className='absolute left-6 right-0 text-neutral-500'>postBy_</p>
+          <p className='absolute left-8 right-0 text-neutral-500'>postBy_</p>
         </div>
       </div>  
       <h3 className='text-neutral-700 my-4 text-2xl font-bold '>{author.name}</h3>

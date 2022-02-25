@@ -48,7 +48,7 @@ const PostDetail = ({ post }) => {
 
 
   return (
-    <div className="mb-8 rounded-lg bg-white p-4 pb-2 shadow-lg mt-8">
+    <div className="PostDetails mb-8 rounded-lg bg-white p-4 pb-2 shadow-lg mt-8">
       <div className="relative mb-3 overflow-hidden shadow-md ">
         <Image
          
@@ -60,7 +60,7 @@ const PostDetail = ({ post }) => {
           objectFit='cover'
         />
       </div>
-      <div className="px-6 ">
+      <div className="PostDetailContent px-6 ">
         <div className="mb-8 flex w-full items-center">
           <div className=" mr-8 flex items-center w-auto">
             <Image
