@@ -50,7 +50,7 @@ const Header = ( ) => {
       <div ref={navbarRef} className="navbar active flex flex-wrap items-center justify-arround w-full py-6 px-4 ">
         <div className="md-float-left block ">
           <Link href="/">
-            <span className="navbrand cursor-pointer text-3xl font-bold text-slate-700 flex align-middle items-center gap-1 hover:animate-pulse">
+            <span className="navbrand  cursor-pointer text-3xl font-bold text-slate-700 flex align-middle items-center transition-all gap-1 hover:-translate-x-1">
                <Image
                 src='/r.png' width={30} height={30} className="animate-spin hover:animate-none" alt='logo'
                />Ddoys.
