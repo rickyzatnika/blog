@@ -1,5 +1,7 @@
+
 import React, { useRef, useState, useEffect } from 'react';
 import { submitComment } from '../services';
+
 
 const CommentsForm = ({ slug }) => {
 
@@ -48,7 +50,6 @@ const CommentsForm = ({ slug }) => {
     })
   }
 
-
   return (
     <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8'>
         <h3 className='text-xl mb-8 font-semibold border-b pb-4 text-gray-700'>Leave a Comment ..</h3>
@@ -82,12 +83,13 @@ const CommentsForm = ({ slug }) => {
               <label htmlFor='storeData' className='text-sm ml-2 text-gray-500 cursor-pointer'>Ingat saya</label>
             </div>
         </div>
-        {error && <p className='text-xs text-red-500'>Hey kamu ! iyaahh kamu, isi yang bener atuh ..</p>}
-        <div className="mt-8 ">
+        {error && <p className='text-xs animate-bounce text-red-500'>*harap isi bidang yang kosong !!</p>}
+        <div className="mt-8 items-center">
           <button type='button' onClick={handleComments}
             className="text-gray-700 transition duration-500 ease hover:bg-teal-700 inline-block bg-teal-500 text-lg rounded-full px-8 py-1 cursor-pointer "
           >Kirim</button>
-          {showSuccesMessage && <span className='text-xl float-right mt-3 text-green-500 font-semibold'>Comment submitted for review</span>}
+            {showSuccesMessage && <span className='text-sm float-right mt-3 text-green-500 font-normal'>Komentar dikirim untuk ditinjau</span>}
+       
         </div>
     </div>
   )
