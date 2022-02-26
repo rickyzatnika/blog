@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Link from 'next/link';
 import { getCategories } from '../services';
 
+
 const Categories = () => {
   const [categories, setCategories] = useState([])
 
@@ -15,13 +16,17 @@ const Categories = () => {
         <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
             Categories
         </h3>
-        {categories.map((category) => (
-          <Link key={category.slug} href={`/category/${category.slug}`}>
-            <span className='cursor-pointer text-neutral-600 block pb-3 mb-3 border-b hover:bg-neutral-200 pt-2 px-4 hover:bg-opacity-60'>
-              {category.name}
-            </span>
-          </Link>
-        ))}
+        <ul>
+          {categories.map((category) => (
+            <li key={category.slug}>
+                <Link href={`/category/${category.slug}`}>
+                <span className='cursor-pointer text-stone-600 block pb-3 mb-3 border-b hover:bg-stone-200 pt-2 px-4 hover:text-stone-800'>
+                  {category.name}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
     </div>
   )
 }

@@ -3,6 +3,8 @@ import { getPosts, getPostDetails } from '../../services';
 import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Loader } from '../../components'
 import { useRouter } from 'next/router';
 import { AdjacentPosts } from '../../section';
+import { motion } from 'framer-motion'
+
 
 
 const PostDetails = ({ post }) => {
@@ -10,10 +12,27 @@ const PostDetails = ({ post }) => {
   if(router.isFallback) {
     return <Loader/>
   }
+
+  const easing = [.6, -0.05, 0.01, 0.99];
+  const fadeInUp = {
+    initial: {
+      y: 60,
+      opacity: 0
+    },
+    animate: {
+      y:0,
+      opacity: 1,
+      transition: {
+        duration: .6,
+        ease: easing
+      }
+    }
+  }
   
   return (
-    <div className='container mx-auto px-4 mb-8'>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <motion.div exit={{ opacity: 0 }}
+        className='container mx-auto px-4 mb-8'>
+        <motion.div variants={fadeInUp} className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 lg:col-span-8">
             <PostDetail post={post}/>
             <Author author={post.author}/>
@@ -28,12 +47,12 @@ const PostDetails = ({ post }) => {
               <Categories/>
             </div>
           </div>
-        </div>
-    </div>
+        </motion.div>
+    </motion.div>
   )
 }
 
-export default PostDetails
+export default PostDetails;
 
 
 export async function getStaticProps({ params }) {
