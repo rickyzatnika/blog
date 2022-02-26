@@ -16,9 +16,9 @@ export default function Footer() {
           <div className="text-neutral-500 text-sm hover:text-cyan-500"><Link href='https://twitter.com/i/flow/login'>Twitter</Link></div>
         </div>
       </div>
-      <div className="container bg-black bg-opacity-90 block text-center py-3 md:flex justify-around align-middle items-center max-w-full">
-        <small className="text-teal-700  hover:text-teal-500">© 2021 - 2022<Link href='https://ryza.vercel.app/'> ryza.vercel.app</Link></small>
-        <small className='text-stone-700 '>sponsor by : </small>
+      <div className="container bg-black bg-opacity-90 text-center py-3 block flex-wrap md:flex justify-around align-middle items-center max-w-full">
+        <small className="text-teal-700  hover:text-teal-500 ">© 2021 - 2022<Link href='https://ryza.vercel.app/'> ryza.vercel.app</Link></small>
+        <small className='text-stone-700 flex justify-center'>sponsor by : </small>
         <div className="flex gap-2 justify-center">
           <small className='text-teal-700 underline  hover:text-teal-500 '> <Link href='/'>Privacy Police</Link> </small>
           <small className='text-teal-700 underline  hover:text-teal-500 '> <Link href='/'>Disclaimer</Link> </small>
