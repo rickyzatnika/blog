@@ -10,7 +10,7 @@ const Contact = () => {
         <meta name='description' content='hubungi kami untuk informasi lebih lanjut'/>
       </Head>
       <motion.div exit={{ opacity: 0 }}>
-        <div className='text-center'>
+        <div className='text-center h-screen'>
             <h2 className='text-4xl'>Contact Page</h2>
         </div>
       </motion.div>
