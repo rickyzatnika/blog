@@ -30,7 +30,7 @@ const PostDetails = ({ post }) => {
   }
   
   return (
-    <motion.div exit={{ opacity: 0 }}
+    <motion.div exit={{ opacity: 0 }} initial='inital' animate='animate'
         className='container mx-auto px-4 mb-8'>
         <motion.div variants={fadeInUp} className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 lg:col-span-8">
