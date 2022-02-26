@@ -69,7 +69,7 @@ const CommentsForm = ({ slug }) => {
               name='name'
             />
             <input 
-              type="text" 
+              type="email" 
               ref={emailEl}
               className="p-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-200 bg-opacity-40 text-gray-700"
               placeholder='Email'
