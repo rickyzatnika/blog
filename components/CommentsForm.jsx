@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 import React, { useRef, useState, useEffect } from 'react';
 import { submitComment } from '../services';
 
@@ -79,7 +79,7 @@ const CommentsForm = ({ slug }) => {
         <div className="grid grid-cols-1 gap-4 mb-4">
             <div className='check inline items-center px-2 mt-2'>
               <input ref={storeDataEl} type="checkbox" id='storeData' name='storeData' value='true' />
-              <span class="checkmark"></span>
+              <span className="checkmark"></span>
               <label htmlFor='storeData' className='text-sm ml-2 text-gray-500 cursor-pointer'>Ingat saya</label>
             </div>
         </div>
@@ -89,7 +89,7 @@ const CommentsForm = ({ slug }) => {
             className="text-gray-700 transition duration-500 ease hover:bg-teal-700 inline-block bg-teal-500 text-lg rounded-full px-8 py-1 cursor-pointer "
           >Kirim</button>
             {showSuccesMessage && <span className='text-sm float-right mt-3 text-green-500 font-normal'>Komentar dikirim untuk ditinjau</span>}
-       
+         
         </div>
     </div>
   )
