@@ -38,10 +38,12 @@ export default function Home({ posts }) {
             >
           <motion.div variants={fadeInUp} className="container max-w-full mx-auto mb-8 px-8">
             
-            <div className="text-center my-20">
-              <h1 className=' text-2xl text-slate-700'>
-                  Blog seputar Hiburan, Informasi, Kuliner, Tutorial <br /> dan Lifestyle Terupdate 
+            <div className="text-center text-slate-700 my-20">
+              <h1 className=' text-3xl '>
+                  Menyajikan Informasi Berupa Artikel Tentang <br />Hiburan, Pariwisata, Kuliner, Fashion & 
+                  Teknologi
               </h1>
+              <p>Terupdate Seputar Kota Bandung dan sekitarnya</p>
             </div>
             <div>
               <FeaturedPosts/>

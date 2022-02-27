@@ -50,27 +50,28 @@ const Header = ( ) => {
       <div ref={navbarRef} className="navbar active flex flex-wrap items-center justify-arround w-full py-6 px-4 ">
         <div className="md-float-left block ">
           <Link href="/">
-            <span className="navbrand  cursor-pointer text-3xl font-bold text-slate-700 flex align-middle items-center transition-all gap-1 hover:-translate-x-1">
+            <span className="navbrand border-r cursor-pointer font-bold text-gray-500 flex align-middle items-center transition ease-in-out gap-1 hover:-translate-x-1 hover:text-gray-700">
                <Image
-                src='/r.png' width={30} height={30} className="animate-spin hover:animate-none" alt='logo'
-               />Ddoys.
+                src='/logo-footer.png' width={160} height={60} className=" hover:animate-none" alt='logo'
+               />
+               <span className='text-xs flex ml-2 hidden md:flex w-40'> Media Informasi Seputar Kota Bandung</span>
             </span>
           </Link>
         </div>
         <nav className="navigation md-contents align-middle hidden md:flex justify-center relative top-1 item-center ">
           <ul className='flex gap-8 flex-wrap'>
-            <li className='inline text-neutral-700 text-sm font-bold hover:border-b hover:border-teal-600 hover:text-teal-600'>
+            <li className='inline text-neutral-500 text-xs font-semibold hover:border-b hover:border-teal-600 hover:text-teal-600'>
               <Link href='/'>Home</Link>
             </li>
-            <li className='inline text-neutral-700 text-sm font-bold hover:border-b hover:border-teal-600 hover:text-teal-600'>
+            <li className='inline text-neutral-500 text-xs font-semibold hover:border-b hover:border-teal-600 hover:text-teal-600'>
               <Link href='/About'>About Us</Link>
             </li>
-            <li className='inline text-neutral-700 text-sm font-bold hover:border-b hover:border-teal-600 hover:text-teal-600'>
+            <li className='inline text-neutral-500 text-xs font-semibold hover:border-b hover:border-teal-600 hover:text-teal-600'>
               <Link href='/Contact'>Contact</Link>
             </li>
           </ul>
         </nav>
-      
+        
         <button onClick={handleClick} type="button" aria-controls='mobile-menu' aria-expanded="false" className='z-40 menu'>
               <span className='sr-only'></span>
               {!click ? (
@@ -89,7 +90,7 @@ const Header = ( ) => {
               {categories.map((category) => (
                 <li  key={category.slug}>
                   <Link href={`/category/${category.slug}`} onClick={closeMobileMenu}>
-                    <span className="p-3 cursor-pointer align-middle text-sm transition ease-in delay-50 hover:bg-white text-neutral-200 md:float-right hover:text-teal-800">
+                    <span className="p-3 cursor-pointer align-middle text-sm transition ease-in delay-50 hover:bg-white text-neutral-400 md:float-right hover:text-gray-700">
                       {category.name} 
                     </span>
                   </Link>
