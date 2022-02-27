@@ -140,8 +140,8 @@ p ,article {
   stroke: whitesmoke;
 }
 
-.navbar.activated .navbrand {
-  display: none;
+.navbar.activated .navbrand span{
+ display: none;
 }
 .navbar.activated .navbrand img{
   width: 90px !important;
