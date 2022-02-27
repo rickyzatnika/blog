@@ -27,7 +27,7 @@ export default function Home({ posts }) {
         <Head>
           <title>Ryza - Homepage</title>
           <link rel="icon" href="/favicon.ico" />
-          <meta name="description" content="Blog seputar Hiburan, Informasi, Kuliner, Tutorial
+          <meta name="description" content="Artikel tentang Hiburan, Informasi, Kuliner, Tutorial
               dan Lifestyle Terbaru 2022"  />
         </Head>
         <motion.div 
@@ -39,10 +39,11 @@ export default function Home({ posts }) {
           <motion.div variants={fadeInUp} className="container max-w-full mx-auto mb-8 px-8">
             
             <div className="text-center text-slate-700 my-20">
-              <h1 className=' text-3xl '>
-                  Menyajikan Informasi Berupa Artikel Tentang <br />Hiburan, Pariwisata, Kuliner, Fashion & 
-                  Teknologi
+              <h1 className=' text-3xl leading-loose'>
+                  Menyajikan Informasi Berupa Artikel Tentang
               </h1>
+              <h2 className='text-3xl'>Hiburan, Pariwisata, Kuliner, Fashion & 
+                  Teknologi</h2>
               <p>Terupdate Seputar Kota Bandung dan sekitarnya</p>
             </div>
             <div>
