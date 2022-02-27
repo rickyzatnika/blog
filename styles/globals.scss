@@ -141,12 +141,7 @@ p ,article {
 }
 
 .navbar.activated .navbrand {
-  font-size: 0.9rem !important;
-  color: rgb(216, 215, 215);
-  font-weight: 100;
-  &:hover {
-    color: #eee;
-  }
+  display: none;
 }
 .navbar.activated .navbrand img{
   width: 90px !important;
