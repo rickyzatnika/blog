@@ -141,12 +141,17 @@ p ,article {
 }
 
 .navbar.activated .navbrand span{
- display: none;
+  font-size: 0.9rem !important;
+  color: rgb(216, 215, 215);
+  font-weight: 100;
+  &:hover {
+    color: #eee;
+  }
 }
 .navbar.activated .navbrand img{
   width: 90px !important;
   height: 40px !important;
-  animation: unset ;
+  border-right: unset;
 }
 
 
