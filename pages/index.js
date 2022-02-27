@@ -29,6 +29,10 @@ export default function Home({ posts }) {
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="Artikel tentang Hiburan, Informasi, Kuliner, Tutorial
               dan Lifestyle Terbaru 2022"  />
+          <meta name='keywords' content='informasi tentang hiburan, pariwisata, kuliner, tutorial seputar kota bandung'/>   
+          <meta name='author' content='true'/>
+          <meta name='robots' content="index,follow"/>
+          <meta content='index,follow' name='googlebot'/>
         </Head>
         <motion.div 
             exit={{ opacity: 0 }}
