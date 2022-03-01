@@ -79,7 +79,7 @@ const PostDetail = ({ post }) => {
             objectFit='cover'
           />
         </div>
-        <div className="px-0 md:px-4 ">
+        <div className="px-2 md:px-4 ">
           <div className="mb-8 flex w-full items-center">
             <div className=" mr-8 flex items-center w-auto">
               <Image
@@ -94,7 +94,7 @@ const PostDetail = ({ post }) => {
                 {post.author.name}
               </p>
             </div>
-            <div className=" font-medium text-gray-700 px-0 md:px-2 items-center flex align-middle gap-2 justify-center">
+            <div className=" font-medium text-gray-700 px-2 md:px-4 items-center flex align-middle gap-2 justify-center">
               
                 <Image
 
@@ -110,9 +110,9 @@ const PostDetail = ({ post }) => {
               
             </div>
           </div>
-          <h1 className="mb-8 text-3xl font-semibold ">{post.title}</h1>
+          <h1 className="mb-8 text-3xl font-semibold px-0 md:px-2 ">{post.title}</h1>
           
-        <article className='text-neutral-700 p-2 m-0'>
+        <article className='text-neutral-700 p-0 md:p-2 m-0'>
           {post.content.raw.children.map((typeObj, index) => {
               const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
               
