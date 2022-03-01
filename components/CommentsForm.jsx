@@ -55,7 +55,7 @@ const CommentsForm = ({ slug }) => {
         <h3 className='text-xl mb-8 font-semibold border-b pb-4 text-gray-700'>Tinggalkan Komentar ..</h3>
         <div className="grid grid-cols-1 gap-4 mb-4">
             <textarea ref={commentEl} 
-              className="p-4 outline-none h-60 w-full rounded-lg focus:ring-2 focus:ring-cyan-200 bg-gray-200 bg-opacity-40 text-gray-700"
+              className="p-4 outline-none h-60 w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-300 bg-opacity-30 text-gray-700"
               placeholder='Komentar'
               name='comment'
             />
@@ -64,7 +64,7 @@ const CommentsForm = ({ slug }) => {
             <input 
               type="text" 
               ref={nameEl}
-              className="p-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-cyan-200 bg-gray-200 bg-opacity-40 text-gray-700"
+              className="p-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-300 bg-opacity-30 text-gray-700"
               placeholder='Nama'
               name='name'
             />
@@ -72,7 +72,7 @@ const CommentsForm = ({ slug }) => {
               type="email"
               id="email"
               ref={emailEl}
-              className="p-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-cyan-200 bg-gray-200 bg-opacity-40 text-gray-700"
+              className="p-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-300 bg-opacity-30 text-gray-700"
               placeholder='Email'
               name='email'
             />

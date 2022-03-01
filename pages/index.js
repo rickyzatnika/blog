@@ -2,9 +2,8 @@
 import Head from 'next/head';
 import  { PostCard, Categories, PostWidget} from '../components';
 import { getPosts } from '../services';
-import {FeaturedPosts}  from '../section'
-import Link from 'next/link';
-import { motion } from 'framer-motion'
+import {FeaturedPosts}  from '../section';
+import { motion } from 'framer-motion';
 
 export default function Home({ posts }) {
   const easing = [.6, -0.05, 0.01, 0.99];
