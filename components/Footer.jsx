@@ -20,8 +20,8 @@ export default function Footer() {
         <small className="text-teal-700  hover:text-teal-500 ">© 2021 - 2022<Link href='https://ryza.vercel.app/'> ryza.vercel.app</Link></small>
         <small className='text-stone-700 flex justify-center'>sponsor by : </small>
         <div className="flex gap-2 justify-center">
-          <small className='text-teal-700 underline  hover:text-teal-500 '> <Link href='/'>Privacy Police</Link> </small>
-          <small className='text-teal-700 underline  hover:text-teal-500 '> <Link href='/'>Disclaimer</Link> </small>
+          <small className='text-teal-700 underline  hover:text-teal-500 '> <Link href='/' passHref={true}>Privacy Police</Link> </small>
+          <small className='text-teal-700 underline  hover:text-teal-500 '> <Link href='/' passHref={true}>Disclaimer</Link> </small>
         </div>
       </div>
     </>

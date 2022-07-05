@@ -1,8 +1,9 @@
-import style from './Headers.module.css';
-import Link from 'next/link';
-import React, { useState, useEffect, useRef } from 'react';
-import { getCategories } from '../services';
-import Image from 'next/image';
+import style from './Headers.module.css'
+import Link from 'next/link'
+import React, { useState, useEffect, useRef } from 'react'
+import { getCategories } from '../services'
+import Image from 'next/image'
+import { constants } from 'buffer'
 
 const Headers = () => {
   const [categories, setCategories] = useState([])
@@ -35,12 +36,12 @@ const Headers = () => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
   const closeMenu = () => setClick(false)
-
-  return (
+  
+    return (
     <>
       <nav className={style.Navbar}>
         <div className={style.NavContainer}>
-          <Link href="/">
+          <Link href="/" passHref={true}>
             <h2 className={style.Navbrand}>
               U
               <div className={style.Logo}>
@@ -51,17 +52,17 @@ const Headers = () => {
           </Link>
           <ul className={style.Navlist}>
             <li className={style.Navlink}>
-              <Link href="/">
+              <Link href="/" passHref={true}>
                 <a>Home</a>
               </Link>
             </li>
             <li className={style.Navlink}>
-              <Link href="/About">
+              <Link href="/About" passHref={true}>
                 <a>About</a>
               </Link>
             </li>
             <li className={style.Navlink}>
-              <Link href="/Contact">
+              <Link href="/Contact" passHref={true}>
                 <a>Contact</a>
               </Link>
             </li>
@@ -73,7 +74,7 @@ const Headers = () => {
             type="button"
             aria-controls="mobile-menu"
             aria-expanded="false"
-            className='menu'
+            className="menu"
           >
             {!click ? (
               <svg
@@ -122,7 +123,7 @@ const Headers = () => {
                   <li key={category.slug}>
                     <Link
                       href={`/category/${category.slug}`}
-                      onClick={closeMenu}
+                      onClick={closeMenu} passHref={true}
                     >
                       <span>{category.name}</span>
                     </Link>

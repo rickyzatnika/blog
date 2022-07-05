@@ -19,7 +19,7 @@ const Categories = () => {
         <ul>
           {categories.map((category) => (
             <li key={category.slug}>
-                <Link href={`/category/${category.slug}`}>
+                <Link href={`/category/${category.slug}`} passHref={true}>
                 <span className='cursor-pointer text-stone-600 block pb-3 mb-3 border-b hover:bg-stone-200 pt-2 px-4 hover:text-stone-800'>
                   {category.name}
                 </span>

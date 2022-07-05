@@ -14,7 +14,7 @@ const PostWidget = ({ categories, slug }) => {
       getRecentPosts()
           .then((result) => setRelatedPosts(result))
     }
-  }, [slug])
+  }, [categories, slug])
 
 
   
@@ -28,7 +28,7 @@ const PostWidget = ({ categories, slug }) => {
         {relatedPosts.map((post) => (
           <div key={post.title} className="flex items-center w-full mb-8 transition-opacity opacity-80 hover:opacity-100">
             <div className="w-16 flex-none overflow-hidden">
-              <Image src={post.featuredImage.url} alt={post.title} 
+              <Image priority={true} src={post.featuredImage.url} alt={post.title} 
                 width={90} 
                 height={90}
                 
@@ -41,7 +41,7 @@ const PostWidget = ({ categories, slug }) => {
               <p className='text-gray-500 text-xs'>
                 {moment(post.createdAt).format('MMM DD, YYYY')}
               </p>
-              <Link href={`/post/${post.slug}`} key={post.title}>
+              <Link href={`/post/${post.slug}`} key={post.title} passHref={true}>
                 {post.title}
               </Link>
             </div>

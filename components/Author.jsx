@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 
 
 
@@ -8,10 +8,11 @@ const Author = ({ author }) => {
     <div className='text-center mt-20 mb-8 p-8 mx-auto w-80 relative rounded-lg shadow-lg bg-neutral-100'>
       <div className="absolute left-2  top-5 ">
         <div className="flex items-center justify-center align-middle mr-2 border-b">
-          <img
+          <Image
+            priority={true}
             alt={author.name}
-            width='28px'
-            heigth='28px'
+            width={28}
+            heigth={28}
             className='animate-bounce relative align-middle  rounded-full'
             src={author.photo.url}
           />

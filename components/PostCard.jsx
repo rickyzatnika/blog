@@ -54,14 +54,14 @@ const PostCard = ({ post }) => {
           </div>
         </div>
         <h1 className='text-neutral-800 transition duration-300 mb-4 cursor-pointer text-center p-2 hover:text-teal-600 text-3xl font-medium'>
-          <Link href={`/post/${post.slug}`}>
+          <Link href={`/post/${post.slug}`} passHref={true}>
             {post.title}
           </Link>
         </h1>
         
         <p className="text-base font-normal text-neutral-500 px-4 lg:px-2 mb-8">{post.excerpt}</p>
         <div className="text-center">
-          <Link href={`/post/${post.slug}`}>
+          <Link href={`/post/${post.slug}`} passHref={true}>
             <span className=' text-gray-200 cursor-pointer transition duration-300  p-2 px-8 rounded-2xl  hover:bg-teal-600 hover:shadow-md shadow-sm shadow-teal-400/80 bg-teal-500 hover:transition  hover:duration-100 '>Lanjut baca <b>→</b></span>
           </Link>
         </div>

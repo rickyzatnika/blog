@@ -70,7 +70,7 @@ const PostDetail = ({ post }) => {
       <motion.div variants={fadeInUp} className="mb-8 rounded-lg bg-white p-0 md:p-4 pb-2 shadow-lg mt-8">
         <div className="relative mb-3 overflow-hidden shadow-md ">
           <Image
-          
+            priority={true}
             src={post.featuredImage.url}
             alt={post.title}
             width={1200}
